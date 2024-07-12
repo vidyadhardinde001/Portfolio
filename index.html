@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="icons">
+        <a href="link_to_resume" target="_blank"
+          ><img src="assets/resume.svg" alt="Resume"
+        /></a>
+        <a href="https://github.com/vidyadhardinde001" target="_blank"
+          ><img src="assets/git.svg" alt="GitHub"
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/vidyadhar-dinde-447371252/"
+          target="_blank"
+          ><img src="assets/lin.svg" alt="LinkedIn"
+        /></a>
+        <a href="https://www.instagram.com/_vidyadhar_d/" target="_blank"
+          ><img src="assets/insta.svg" alt="Instagram"
+        /></a>
+        <a href="mailto:vidyadhardinde@gmail.com"
+          ><img src="assets/email.svg" alt="Email"
+        /></a>
+        <!-- Profile Picture Icon -->
+        <div class="profile-icon">
+          <img src="assets/pfp.png" alt="Profile" id="profileIcon" />
+        </div>
+      </div>
+      <!-- Summary Box -->
+      <div class="summary-box" id="summaryBox">
+        <p>
+          Hey there, I am Vidyadhar Dinde...thanks for visiting my portfolio
+        </p>
+      </div>
+    </div>
+
+    <main>
+      <div class="video-container">
+        <video autoplay muted loop class="background-video">
+          <source src="assets/nintendo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="overlay-content">
+          <div class="intro-text">
+            Hi There, I am <span>Vidyadhar Dinde.</span> I am a
+            <div><span id="element"></span></div>
+            <div class="btn">
+              <button onclick="location.href='link_to_resume'">
+                Download Resume
+              </button>
+              <button
+                onclick="window.location.href='https://github.com/vidyadhardinde001'"
+              >
+                Visit Github
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <section class="card-view">
+        <div class="card">
+          <h2>My Skills</h2>
+          <div class="skills-container">
+            <div class="skill-card">
+              <img src="assets/c.svg" alt="C++" />
+              <p>C++</p>
+            </div>
+            <div class="skill-card">
+              <img src="assets/sql.png" alt="SQL" />
+              <p>SQL</p>
+            </div>
+            <div class="skill-card">
+              <img src="assets/docker-4.svg" alt="Docker" />
+              <p>Docker</p>
+            </div>
+            <div class="skill-card">
+              <img src="assets/github.png" alt="GitHub" />
+              <p>GitHub</p>
+            </div>
+            <div class="skill-card">
+              <img src="assets/blender-2.svg" alt="GitHub" />
+              <p>Blender</p>
+            </div>
+            <!-- Add more skill cards as needed -->
+          </div>
+        </div>
+        <div class="card">
+          <h2>Competitive Programming</h2>
+          <p>Check out my profiles on various platforms:</p>
+          <div class="cp-links">
+            <a href="https://leetcode.com/u/vidyadhardinde001/" target="_blank"
+              ><img src="assets/leetcode.svg" alt="LeetCode"
+            /></a>
+            <a
+              href="https://www.codechef.com/users/vidyadhardinde"
+              target="_blank"
+              ><img src="assets/codechef.png" alt="CodeChef"
+            /></a>
+            <a
+              href="https://www.hackerrank.com/profile/vidyadhardinde01"
+              target="_blank"
+              ><img src="assets/hackerrank.svg" alt="HackerRank"
+            /></a>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Blender Projects</h2>
+          <div class="blender-project-container">
+            <div class="blender-project">
+              <video controls>
+                <source src="assets/webdanim.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+              <p>Project Description 1</p>
+            </div>
+            <div class="blender-project">
+              <video controls>
+                <source src="assets/igloo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <p>Project Description 2</p>
+            </div>
+            <div class="blender-project">
+              <video controls>
+                <source src="assets/v1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <p>Project Description 3</p>
+            </div>
+            <button onclick="location.href='blender.html'">See More</button>
+            <!-- Add more project cards as needed -->
+          </div>
+        </div>
+        <div class="card">
+          <h2>Other Projects</h2>
+          <p>Details about your other projects...</p>
+        </div>
+      </section>
+    </main>
+    <div class="cursor-bubble"></div>
+
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "<i> A Student.</i>",
+          "<i>A Blender Artist</i>",
+          "<i> A Cormpetitive Programmer.</i>",
+          "&amp;<i> A Developer.</i>",
+        ],
+        typeSpeed: 20,
+      });
+
+      // Toggle summary box visibility
+      document
+        .getElementById("profileIcon")
+        .addEventListener("click", function () {
+          document.getElementById("summaryBox").classList.toggle("show");
+        });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,467 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #2A2438;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    color: rgb(85, 85, 85);
+}
+
+/* Video Background */
+/* Video Background with Parallax Effect */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%) scale(1.1); /* Adjust scale for parallax effect */
+  z-index: -1;
+}
+
+  
+  .overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .overlay-content .intro-text {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #352F44;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.129);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    width:25vw; /* Adjust width to fit content */
+}
+
+.profile-icon {
+    position: relative;
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .summary-box {
+    display: none;
+    position: absolute;
+    top: 70px; /* Adjust position as needed */
+    right: 0;
+    width: 200px; /* Adjust size as needed */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+  }
+  
+  button {
+    background-color: #5a8bb62b; /* Dark bluish background */
+    color: white; /* White text */
+    padding: 12px 20px; /* Padding inside the button */
+    border: 3px solid white; /* No border */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    letter-spacing: 1px; /* Letter spacing */
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #1565c0; /* Darker shade of bluish */
+  }
+  
+  /* Button focus effect */
+  button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(30, 136, 229, 0.8); /* Soft shadow on focus */
+  }
+
+  .summary-box p {
+    margin: 0;
+    color: #333;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .icons a {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: filter 0.3s ease;
+    overflow: hidden;
+  }
+
+  .icons a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    border-radius: 50%;
+    background-color: rgba(0, 191, 255, 0); /* Transparent initial color */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.icons a:hover::after {
+    background-color: rgba(7, 255, 251, 0.565); /* Light blue with transparency */
+    transform: scale(10); /* Scale effect for emphasis */
+}
+  
+  .icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Adjust styles as needed */
+  
+
+.menu-items {
+    display: flex;
+}
+
+#title {
+    margin-left: 20px;
+    font-size: 1.4rem;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    transition: background-color 0.3s;
+    margin-right: 20px;
+}
+
+.menu-items a:hover {
+    background-color: #555;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px; /* Added max-width for better responsiveness */
+    margin: auto; /* Centering horizontally */
+}
+
+
+.left, .right {
+    width: 40%;
+    font-size: 2.5rem;
+    color: lavender;
+}
+
+.left span{
+    color: lightblue;
+}
+
+#element {
+    color: lavender;
+}
+
+#image_main {
+    width: 110%;
+}
+
+.secondSection {
+    padding: 10px;
+    font-size: 1.5rem;
+    max-width: 80vw;
+    color: white;
+    margin: auto;
+}
+
+hr {
+    border: 0;
+    background-color: rgba(62, 99, 249, 0.464);
+    height: 2px;
+}
+
+.btn button{
+    font-weight: bolder;
+    padding: 12px;
+    border: 2px solid white;
+    color: lavender;
+    background-color:rgb(3, 3, 52);
+}
+
+.btn :nth-child(1){
+    background-color: rgb(138, 138, 235);
+}
+
+.card-view {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between cards */
+    padding: 20px;
+    max-width: 80vw; /* Adjust width to fit content */
+    margin: auto; /* Centering horizontally */
+}
+
+.card {
+    background: linear-gradient(145deg, #352F44, #2A2736);
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(0);
+    position: relative;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: #b3b3b3;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover h2 {
+    color: #62D0FF;
+}
+
+.card:hover p {
+    color: #E1E1E1;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(235deg, transparent, rgba(255, 255, 255, 0.1));
+    transition: all 0.5s ease;
+}
+
+.card:hover::before {
+    transform: rotate(20deg);
+    opacity: 0.2;
+}
+
+.cp-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.cp-links a {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cp-links a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cp-links img {
+    width: 100%;
+    height: 100%;
+    object-fit:inherit;
+}
+
+.blender-project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow-x: auto;
+    padding: 10px 0;
+  }
+  
+  .blender-project {
+    width: 350px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #9290C3;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; /* Ensure proper z-index handling */
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+  }
+  
+  .blender-project video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .blender-project p {
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  /* Hide video controls */
+  .blender-project video::-webkit-media-controls {
+    display: none !important;
+  }
+  
+  /* Ensure the video is muted for autoplay */
+  .blender-project video {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  /* Video hover effect */
+  .blender-project:hover video {
+    transform: scale(1.1);
+  }
+
+  /* Skills Section */
+.skills-section {
+    padding: 40px 0;
+    background-color: #fbbaba;
+    text-align: center;
+  }
+  
+  .skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .skill-card {
+    background-color: #9290C3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 200px;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-card img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .skill-card p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .cursor-bubble {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: -10px; /* Adjust for vertical offset */
+    margin-left: -11px; /* Adjust for horizontal offset */
+    width: 30px; /* Adjust width */
+    border: 2px solid white;
+    height: 30px; /* Adjust height */
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+    border-radius: 50%; /* Rounded shape */
+    pointer-events: none; /* Ensure bubble doesn't interfere with mouse events */
+    z-index: 1000; /* Ensure it's above other content */
+    display: none; /* Initially hidden */
+}
